@@ -38,7 +38,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsMobileMenuOpen(false)}>
           <Image 
-            src="/logontexts.svg" 
+            src="/LogonTexts.svg" 
             alt="MAAI Logo" 
             width={80} 
             height={80} 

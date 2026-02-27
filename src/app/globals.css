@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors from the Design Bible */
+  --color-brand-red: #AF150B;    /* Vivid Red [cite: 63, 65] */
+  --color-brand-orange: #E4AD7A; /* Gray Orange [cite: 66, 73] */
+  --color-brand-black: #000000;  /* Matte Black [cite: 67, 74] */
+  --color-brand-white: #FFFFFF;  /* White Ash [cite: 68, 75] */
+
+  /* Typography */
+  --font-logo: "Architype Aubette", sans-serif; /* [cite: 81] */
+  --font-heading: "Poppins", sans-serif;        /* [cite: 85, 88] */
+  --font-body: "Poppins", sans-serif;           /* [cite: 98, 103, 108] */
+}
+
+/* Base styles for standardizing typography weights */
+@layer base {
+  h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700; /* Bold  */
+  }
+  p {
+    font-family: var(--font-body);
+    font-weight: 500; /* Medium [cite: 103] */
+  }
+}

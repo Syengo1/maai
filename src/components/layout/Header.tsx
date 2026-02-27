@@ -98,7 +98,7 @@ export default function Header() {
               <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
                 Our Story
               </Link>
-              <Link href="/initiatives" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
+              <Link href="/programs" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
                 Initiatives
               </Link>
               <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">

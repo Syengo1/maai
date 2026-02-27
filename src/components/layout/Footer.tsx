@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Brand Column */}
         <div className="col-span-1 md:col-span-1">
           <div className="flex items-center gap-3 mb-6">
-            <Image src="/logontexts.svg" alt="MAASAI ACTION AID INITIATIVE Logo" width={60} height={60} />
+            <Image src="/LogonTexts.svg" alt="MAASAI ACTION AID INITIATIVE Logo" width={60} height={60} />
           </div>
           <p className="font-body text-[#FFFFFF]/70 text-sm leading-relaxed">
             Empowering indigenous people in Kajiado, Narok, and Samburu to live with dignity, free from poverty.

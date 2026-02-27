@@ -2,25 +2,58 @@
 
 @theme {
   /* Colors from the Design Bible */
-  --color-brand-red: #AF150B;    /* Vivid Red [cite: 63, 65] */
-  --color-brand-orange: #E4AD7A; /* Gray Orange [cite: 66, 73] */
-  --color-brand-black: #000000;  /* Matte Black [cite: 67, 74] */
-  --color-brand-white: #FFFFFF;  /* White Ash [cite: 68, 75] */
+  --color-brand-red: #AF150B;    /* Vivid Red */
+  --color-brand-orange: #E4AD7A; /* Gray Orange */
+  --color-brand-black: #000000;  /* Matte Black */
+  --color-brand-white: #FFFFFF;  /* White Ash */
 
   /* Typography */
-  --font-logo: "Architype Aubette", sans-serif; /* [cite: 81] */
-  --font-heading: "Poppins", sans-serif;        /* [cite: 85, 88] */
-  --font-body: "Poppins", sans-serif;           /* [cite: 98, 103, 108] */
+  --font-logo: var(--font-architype), sans-serif; 
+  --font-heading: var(--font-poppins), sans-serif;        
+  --font-body: var(--font-poppins), sans-serif;           
 }
 
 /* Base styles for standardizing typography weights */
 @layer base {
   h1, h2, h3 {
     font-family: var(--font-heading);
-    font-weight: 700; /* Bold  */
+    font-weight: 700; /* Bold */
   }
   p {
     font-family: var(--font-body);
-    font-weight: 500; /* Medium [cite: 103] */
+    font-weight: 500; /* Medium */
   }
+}
+
+/* =========================================
+   CUSTOM THEMED SCROLLBAR
+   ========================================= */
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-brand-red) transparent;
+}
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the vertical scrollbar */
+  height: 10px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f9fafb; /* Very light gray track so it blends with the white/gray-50 backgrounds */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand-red); /* Vivid Red */
+  border-radius: 8px;
+  /* Adding a border that matches the track background creates a sleek "floating" padded effect */
+  border: 2px solid #f9fafb; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-brand-orange); /* Gray Orange on hover */
+  cursor: pointer;
 }

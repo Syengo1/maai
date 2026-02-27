@@ -25,7 +25,7 @@ export default function HeroSection() {
       {/* ================= BACKGROUND IMAGE ================= */}
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/HeroImg.webp" // The high-performance WebP image
+          src="/HeroImg.webp"
           alt="Maasai Action Aid Initiative Hero - Empowering Indigenous Communities" 
           fill 
           priority

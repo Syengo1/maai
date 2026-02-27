@@ -48,6 +48,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 font-heading font-medium text-[#000000]">
+          <Link href="/#" className="hover:text-[#AF150B] transition-colors">Home</Link>
           <Link href="/about" className="hover:text-[#AF150B] transition-colors">Our Story</Link>
           <Link href="/programs" className="hover:text-[#AF150B] transition-colors">Initiatives</Link>
           <Link href="/contact" className="hover:text-[#AF150B] transition-colors">Contact</Link>
@@ -91,6 +92,9 @@ export default function Header() {
             className="absolute top-0 left-0 w-full h-screen bg-[#FFFFFF] flex flex-col items-center justify-center md:hidden z-40"
           >
             <nav className="flex flex-col items-center gap-8 font-heading font-bold text-2xl text-[#000000]">
+              <Link href="/#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
+                Home
+              </Link>
               <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
                 Our Story
               </Link>

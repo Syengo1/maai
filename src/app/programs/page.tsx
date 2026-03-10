@@ -67,7 +67,7 @@ export default function ProgramsPage() {
 
   const interventions = [
     {
-      title: "Poverty Alleviation",
+      title: "Livelihoods Alleviation",
       description: "Designing solutions for Indigenous communities. We focus on climate smart livelihoods, land rights, and market access.",
       details: ["Climate-Smart Livelihoods", "Land & Grazing Rights", "Alternative Livelihoods"],
       bgImage: "/simohandshake.webp",
@@ -163,7 +163,7 @@ export default function ProgramsPage() {
               Community-Driven <br /> Solutions for <span className="text-[#AF150B]">Sustainable Impact.</span>
             </motion.h1>
             <motion.p variants={fadeInUp} className="font-body text-lg lg:text-xl text-[#FFFFFF]/90 leading-relaxed max-w-2xl mx-auto">
-              We run community-led programs focused on climate adaptation, education justice, and poverty alleviation for Indigenous groups across Kajiado, Narok, and Samburu.
+              We run community-led programs focused on climate adaptation, education justice, and Livelihoods alleviation for Indigenous groups across Kajiado, Narok, and Samburu.
             </motion.p>
             <motion.div variants={fadeInUp} className="mt-10 flex flex-wrap justify-center gap-4">
               <Link href="/support" className="bg-[#AF150B] text-[#FFFFFF] px-8 py-4 rounded-full font-heading font-bold hover:bg-[#E4AD7A] hover:text-[#000000] transition-colors shadow-lg hover:shadow-xl text-lg">

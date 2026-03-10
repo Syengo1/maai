@@ -29,7 +29,7 @@ export default function AboutPage() {
     { name: "Simon Musanga", role: "Chairman / Co-founder", image: "/musanga.webp" },
     { name: "David Topuaa", role: "Secretary", image: "/david.webp" },
     { name: "Leah Sereya", role: "Treasurer", image: "/leah.webp" },
-    { name: "Isaac Monirei", role: "Board Member", image: "/placeholder-board.webp" },
+    { name: "Isaac Monirei", role: "Board Member", image: "/isaac.webp" },
     { name: "Magdalene Ntelui", role: "Board Member", image: "/placeholder-board.webp" }
   ];
 

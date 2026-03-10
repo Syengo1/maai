@@ -4,10 +4,10 @@ import TheoryOfChangeSection from '@/components/sections/TheoryOfChangeSection';
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col w-full overflow-hidden">
+    <main className="flex flex-col w-full overflow-hidden bg-[#FFFFFF]">
       <HeroSection />
       <FocusRegionsSection />
       <TheoryOfChangeSection />
-    </div>
+    </main>
   );
 }

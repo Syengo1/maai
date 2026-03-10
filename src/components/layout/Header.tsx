@@ -3,11 +3,21 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+
+// Centralized navigation configuration for easy scalability
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Our Story', href: '/about' },
+  { name: 'Initiatives', href: '/programs' },
+  { name: 'Contact', href: '/contact' }
+];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname(); // Retrieves the current route
 
   // Handle scroll detection for the transparent-to-solid effect
   useEffect(() => {
@@ -25,17 +35,21 @@ export default function Header() {
     }
   }, [isMobileMenuOpen]);
 
+  // Determine text color based on scroll state and background
+  const navTextColor = isScrolled ? 'text-[#000000]' : 'text-[#808080]';
+  const logoSrc = isScrolled ? '/LogoText.svg' : '/LogoText.svg';
+
   return (
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#FFFFFF]/95 backdrop-blur-md shadow-md py-2' 
-          : 'bg-transparent py-6' // Extra padding and transparent background at the top
+          ? 'bg-[#FFFFFF]/95 backdrop-blur-md shadow-md py-3 lg:py-4' 
+          : 'bg-transparent py-6 lg:py-8'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center relative z-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
         
-        {/* Logo */}
+        {/* LOGO */}
         <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsMobileMenuOpen(false)}>
           <Image 
             src="/LogonTexts.svg" 
@@ -46,66 +60,99 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 font-heading font-medium text-[#000000]">
-          <Link href="/#" className="hover:text-[#AF150B] transition-colors">Home</Link>
-          <Link href="/about" className="hover:text-[#AF150B] transition-colors">Our Story</Link>
-          <Link href="/programs" className="hover:text-[#AF150B] transition-colors">Initiatives</Link>
-          <Link href="/contact" className="hover:text-[#AF150B] transition-colors">Contact</Link>
+        {/* DESKTOP NAVIGATION */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            
+            return (
+              <Link 
+                key={link.name} 
+                href={link.href} 
+                className={`relative font-heading font-bold text-sm tracking-wide transition-colors duration-300 hover:text-[#E4AD7A] ${
+                  isActive ? 'text-[#E4AD7A]' : navTextColor
+                }`}
+              >
+                {link.name}
+                
+                {/* Framer Motion Sliding Active Indicator */}
+                {isActive && (
+                  <motion.div
+                    layoutId="desktopActiveIndicator"
+                    className="absolute -bottom-1.5 left-0 right-0 h-0.5 bg-[#E4AD7A] rounded-full"
+                    initial={false}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
-        {/* Call to Action Button (Desktop) */}
+        {/* CTA BUTTON (Desktop) */}
         <div className="hidden md:block">
-          <Link href="/support" className="bg-[#AF150B] text-[#FFFFFF] px-6 py-2.5 rounded-full font-heading font-semibold hover:bg-[#E4AD7A] hover:text-[#000000] transition-all duration-300">
-            Support Us
+          <Link 
+            href="/support" 
+            className="bg-[#AF150B] text-[#FFFFFF] px-6 py-2.5 rounded-full font-heading font-bold text-sm hover:bg-[#E4AD7A] hover:text-[#000000] transition-all duration-300 shadow-md hover:shadow-lg"
+          >
+            Fund an Initiative
           </Link>
         </div>
 
-        {/* Hamburger Menu Toggle (Mobile) */}
+        {/* MOBILE MENU TOGGLE */}
         <button 
-          className="md:hidden text-[#000000] focus:outline-none p-2"
+          className="md:hidden relative z-50 p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle Menu"
         >
-          {isMobileMenuOpen ? (
-            // Close (X) Icon
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            // Hamburger Icon
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          )}
+          <div className="w-6 h-5 flex flex-col justify-between items-end">
+            <span className={`block h-0.5 w-full rounded-full transition-all duration-300 ${isMobileMenuOpen ? 'bg-[#000000] rotate-45 translate-y-2.5' : (isScrolled ? 'bg-[#000000]' : 'bg-[#808080]')}`} />
+            <span className={`block h-0.5 w-4/5 rounded-full transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : (isScrolled ? 'bg-[#000000]' : 'bg-[#808080]')}`} />
+            <span className={`block h-0.5 w-full rounded-full transition-all duration-300 ${isMobileMenuOpen ? 'bg-[#000000] -rotate-45 -translate-y-2' : (isScrolled ? 'bg-[#000000]' : 'bg-[#808080]')}`} />
+          </div>
         </button>
+
       </div>
 
-      {/* Mobile Menu Full-Screen Overlay */}
+      {/* MOBILE FULL-SCREEN MENU */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute top-0 left-0 w-full h-screen bg-[#FFFFFF] flex flex-col items-center justify-center md:hidden z-40"
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 w-full h-screen bg-[#FFFFFF] flex flex-col items-center justify-center md:hidden z-40"
           >
-            <nav className="flex flex-col items-center gap-8 font-heading font-bold text-2xl text-[#000000]">
-              <Link href="/#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
-                Home
-              </Link>
-              <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
-                Our Story
-              </Link>
-              <Link href="/programs" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
-                Initiatives
-              </Link>
-              <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-[#AF150B] transition-colors">
-                Contact
-              </Link>
-              <Link href="/support" onClick={() => setIsMobileMenuOpen(false)} className="mt-6 bg-[#AF150B] text-[#FFFFFF] px-10 py-4 rounded-full hover:bg-[#E4AD7A] hover:text-[#000000] transition-all duration-300 shadow-lg">
-                Support Us
+            <nav className="flex flex-col items-center gap-8 font-heading font-bold text-3xl text-[#000000]">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                
+                return (
+                  <Link 
+                    key={link.name} 
+                    href={link.href} 
+                    onClick={() => setIsMobileMenuOpen(false)} 
+                    className={`relative transition-colors duration-300 ${isActive ? 'text-[#AF150B]' : 'hover:text-[#E4AD7A]'}`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <motion.div
+                        layoutId="mobileActiveIndicator"
+                        className="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-[#AF150B] rounded-full"
+                        initial={false}
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+              
+              <Link 
+                href="/support" 
+                onClick={() => setIsMobileMenuOpen(false)} 
+                className="mt-8 bg-[#AF150B] text-[#FFFFFF] px-10 py-4 rounded-full text-xl hover:bg-[#E4AD7A] hover:text-[#000000] transition-all duration-300 shadow-lg"
+              >
+                Fund an Initiative
               </Link>
             </nav>
           </motion.div>

@@ -16,7 +16,7 @@ const staggerContainer: Variants = {
 };
 
 const heroSlides = [
-  '/HeroImg.webp', // Add more images to public folder for the slideshow
+  '/HeroImg.webp',
   '/HeroImg.webp',
   '/HeroImg.webp',
 ];

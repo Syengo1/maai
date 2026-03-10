@@ -30,7 +30,7 @@ export default function AboutPage() {
     { name: "David Topuaa", role: "Secretary", image: "/david.webp" },
     { name: "Leah Sereya", role: "Treasurer", image: "/leah.webp" },
     { name: "Isaac Monirei", role: "Board Member", image: "/isaac.webp" },
-    { name: "Magdalene Ntelui", role: "Board Member", image: "/placeholder-board.webp" }
+    { name: "Titus Temei", role: "Board Member", image: "/titus.webp" }
   ];
 
   const operationalTeam = [

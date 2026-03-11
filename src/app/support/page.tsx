@@ -48,7 +48,7 @@ export default function SupportPage() {
           className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {/* M-PESA CARD */}
-          <motion.div variants={fadeInUp} className="bg-[#FFFFFF] p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#AF150B] transition-all duration-300 relative overflow-hidden group">
+          <motion.div variants={fadeInUp} className="flex flex-col h-full bg-[#FFFFFF] p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#AF150B] transition-all duration-300 relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-2 bg-[#10C05C] group-hover:bg-[#AF150B] transition-colors"></div>
             <div className="w-14 h-14 bg-[#10C05C]/10 rounded-full flex items-center justify-center mb-6">
               <span className="font-heading font-bold text-[#10C05C] text-xl">M</span>
@@ -57,7 +57,7 @@ export default function SupportPage() {
             <p className="font-body text-[#000000]/70 mb-6 leading-relaxed">
               Quick and secure mobile money contributions for our local supporters across Kenya.
             </p>
-            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+            <div className="mt-auto bg-gray-50 p-4 rounded-xl border border-gray-100">
               <p className="font-body text-sm text-[#000000]/60 mb-1">Paybill Number</p>
               <p className="font-heading font-bold text-xl text-[#000000] tracking-wider">888 999</p>
               <p className="font-body text-sm text-[#000000]/60 mt-3 mb-1">Account Number</p>
@@ -66,7 +66,7 @@ export default function SupportPage() {
           </motion.div>
 
           {/* BANK TRANSFER CARD */}
-          <motion.div variants={fadeInUp} className="bg-[#FFFFFF] p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#AF150B] transition-all duration-300 relative overflow-hidden group">
+          <motion.div variants={fadeInUp} className="flex flex-col h-full bg-[#FFFFFF] p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#AF150B] transition-all duration-300 relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-2 bg-[#E4AD7A] group-hover:bg-[#AF150B] transition-colors"></div>
             <div className="w-14 h-14 bg-[#E4AD7A]/20 rounded-full flex items-center justify-center text-[#AF150B] mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-7 h-7">
@@ -77,7 +77,7 @@ export default function SupportPage() {
             <p className="font-body text-[#000000]/70 mb-6 leading-relaxed">
               Make a direct deposit. Ideal for international donors and larger contributions.
             </p>
-            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-3">
+            <div className="mt-auto bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-3">
               <div>
                 <p className="font-body text-sm text-[#000000]/60">Bank Name</p>
                 <p className="font-heading font-bold text-[#000000]">KCB Bank</p>
@@ -90,11 +90,15 @@ export default function SupportPage() {
                 <p className="font-body text-sm text-[#000000]/60">Account Number</p>
                 <p className="font-heading font-bold text-[#000000] tracking-wider">1350416975</p>
               </div>
+              <div>
+                <p className="font-body text-sm text-[#000000]/60">SWIFT Code</p>
+                <p className="font-heading font-bold text-[#000000] tracking-wider">KCBLKENX</p>
+              </div>
             </div>
           </motion.div>
 
           {/* PARTNERSHIP CARD */}
-          <motion.div variants={fadeInUp} className="bg-[#FFFFFF] p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#AF150B] transition-all duration-300 relative overflow-hidden group">
+          <motion.div variants={fadeInUp} className="flex flex-col h-full bg-[#FFFFFF] p-8 rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl hover:border-[#AF150B] transition-all duration-300 relative overflow-hidden group">
             <div className="absolute top-0 left-0 w-full h-2 bg-[#000000] group-hover:bg-[#AF150B] transition-colors"></div>
             <div className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-[#000000] mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-7 h-7">

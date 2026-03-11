@@ -74,7 +74,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
             className="relative w-full h-[450px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl"
           >
-             <Image src="/HeroImg.webp" alt="Maasai Community" fill className="object-cover" priority />
+             <Image src="/Lady.svg" alt="Maasai Community" fill className="object-cover" priority />
              <div className="absolute inset-0 bg-[#000000]/20"></div>
           </motion.div>
 

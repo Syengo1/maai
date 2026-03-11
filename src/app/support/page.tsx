@@ -80,15 +80,15 @@ export default function SupportPage() {
             <div className="bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-3">
               <div>
                 <p className="font-body text-sm text-[#000000]/60">Bank Name</p>
-                <p className="font-heading font-bold text-[#000000]">Teyub Unlimited Bank</p>
+                <p className="font-heading font-bold text-[#000000]">KCB Bank</p>
               </div>
               <div>
                 <p className="font-body text-sm text-[#000000]/60">Account Name</p>
-                <p className="font-heading font-bold text-[#000000]">Maasai Action Aid Initiative</p>
+                <p className="font-heading font-bold text-[#000000]">MAASAI ACTION AID INITIATIVE</p>
               </div>
               <div>
                 <p className="font-body text-sm text-[#000000]/60">Account Number</p>
-                <p className="font-heading font-bold text-[#000000] tracking-wider">123-456-7890</p>
+                <p className="font-heading font-bold text-[#000000] tracking-wider">1350416975</p>
               </div>
             </div>
           </motion.div>

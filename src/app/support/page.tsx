@@ -156,7 +156,7 @@ export default function SupportPage() {
             <motion.div variants={fadeInUp} className="mt-16 text-center border-t border-[#FFFFFF]/10 pt-10">
               <p className="font-body text-[#FFFFFF]/70 mb-4">Have questions regarding donations, material support, or financial accountability?</p>
               <p className="font-heading font-bold text-xl">
-                Reach out to us at <a href="mailto:INFO@MAAI.CO.KE" className="text-[#E4AD7A] hover:text-[#AF150B] transition-colors">INFO@MAAI.CO.KE</a> or call <a href="tel:+1234567890" className="text-[#E4AD7A] hover:text-[#AF150B] transition-colors">+123-456-7890</a>.
+                Reach out to us at <a href="mailto:maactionaid@gmail.com" className="text-[#E4AD7A] hover:text-[#AF150B] transition-colors">maactionaid@gmail.com</a> or call <a href="tel:+254790185934" className="text-[#E4AD7A] hover:text-[#AF150B] transition-colors">+254 790 185934</a>.
               </p>
             </motion.div>
 

@@ -17,7 +17,7 @@ export default function ContactPage() {
     <div className="flex flex-col w-full min-h-screen bg-gray-50">
       
       {/* ================= CONTACT SECTION ================= */}
-      <section className="relative w-full pt-[130px] lg:pt-[160px] pb-24 px-6 lg:px-12">
+      <section className="relative w-full pt-[100px] lg:pt-[100px] pb-24 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           
           {/* Left Side: Contact Information */}
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-lg text-[#000000]">Email Us</h3>
-                  <a href="mailto:INFO@MAAI.CO.KE" className="font-body text-[#000000]/70 hover:text-[#AF150B] transition-colors">INFO@MAAI.CO.KE</a>
+                  <a href="mailto:maactionaid@gmail.com" className="font-body text-[#000000]/70 hover:text-[#AF150B] transition-colors">maactionaid@gmail.com</a>
                 </div>
               </motion.div>
 
@@ -61,11 +61,11 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-lg text-[#000000]">Call Us</h3>
-                  <a href="tel:+1234567890" className="font-body text-[#000000]/70 hover:text-[#AF150B] transition-colors">+123-456-7890</a>
+                  <a href="tel:+254790185934" className="font-body text-[#000000]/70 hover:text-[#AF150B] transition-colors">+254 790 185934</a>
                 </div>
               </motion.div>
 
-              {/* Location */}
+              {/* Location 
               <motion.div variants={fadeInUp} className="flex items-center gap-6 p-6 bg-[#FFFFFF] rounded-2xl shadow-sm border border-gray-100 hover:border-[#E4AD7A] transition-colors group">
                 <div className="w-14 h-14 bg-[#E4AD7A]/20 rounded-full flex items-center justify-center text-[#AF150B] group-hover:scale-110 transition-transform">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   <h3 className="font-heading font-bold text-lg text-[#000000]">Visit Us</h3>
                   <p className="font-body text-[#000000]/70">Noonkopir, Kitengela, Kenya</p>
                 </div>
-              </motion.div>
+              </motion.div>*/}
             </div>
           </motion.div>
 

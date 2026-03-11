@@ -26,7 +26,7 @@ const heroSlides = [
 // Gallery Data
 const galleryImages = [
   {
-    src: '/foodhandout2.webp',
+    src: '/foodhandout.webp',
     title: 'Field Work',
     description: 'Allocation of food relief to combat food shortages.',
     colSpan: 'lg:col-span-2',

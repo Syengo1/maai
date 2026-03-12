@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     description: "Empowering indigenous people in Kajiado, Narok, and Samburu to live with dignity, free from poverty.",
     images: [
       {
-        url: "opengraph-image.png",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
         alt: "MAASAI ACTION AID INITIATIVE Team in the field",
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MAASAI ACTION AID INITIATIVE",
     description: "Empowering indigenous people to shape their futures.",
-    images: ["/opengraph-image.jpg"],
+    images: ["/opengraph-image.png"],
   },
 
   // Crawler instructions

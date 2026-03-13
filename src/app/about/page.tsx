@@ -71,11 +71,29 @@ export default function AboutPage() {
           </motion.div>
 
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}
-            className="relative w-full h-[450px] lg:h-[600px] rounded-[2rem] overflow-hidden shadow-2xl"
+            initial={{ opacity: 0, scale: 0.95 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ duration: 0.8 }}
+            // Added flex centering and a subtle background color since the image won't bleed to the edges
+            className="relative w-full h-[200px] lg:h-[400px] rounded-[2rem] overflow-hidden shadow-2xl flex items-center justify-center bg-gray-50"
           >
-             <Image src="/Lady.svg" alt="Maasai Community" fill className="object-cover" priority />
-             <div className="absolute inset-0 bg-[#000000]/20"></div>
+            {/* ADJUSTABLE SIZE WRAPPER: 
+                Change w-[80%] and h-[80%] to dial in the exact size of the image in view. 
+                For example, use w-[60%] for a smaller image or w-[95%] for a larger one.
+            */}
+            <div className="relative w-[60%] h-[60%] lg:w-[75%] lg:h-[75%]">
+              <Image 
+                src="/Lady.svg" 
+                alt="Maasai Community" 
+                fill 
+                // Changed to object-contain so it scales perfectly without cropping
+                className="object-contain" 
+                priority 
+              />
+            </div>
+
+            {/* Overlay (Ensure pointer-events-none so it doesn't block interactions if any) */}
+            <div className="absolute inset-0 bg-[#000000]/5 pointer-events-none"></div>
           </motion.div>
 
         </div>

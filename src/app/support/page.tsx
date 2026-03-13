@@ -55,13 +55,15 @@ export default function SupportPage() {
             </div>
             <h3 className="font-heading font-bold text-2xl text-[#000000] mb-4 mt-0">M-Pesa Paybill</h3>
             <p className="font-body text-[#000000]/70 mb-6 leading-relaxed">
-              Quick and secure mobile money contributions for our local supporters across Kenya.
+              Quick and secure mobile money contributions across Kenya.
             </p>
             <div className="mt-auto bg-gray-50 p-4 rounded-xl border border-gray-100">
               <p className="font-body text-sm text-[#000000]/60 mb-1">Paybill Number</p>
-              <p className="font-heading font-bold text-xl text-[#000000] tracking-wider">888 999</p>
+              <p className="font-heading font-bold text-xl text-[#000000] tracking-wider">522 533</p>
               <p className="font-body text-sm text-[#000000]/60 mt-3 mb-1">Account Number</p>
-              <p className="font-heading font-bold text-lg text-[#000000]">MAAI Support</p>
+              <p className="font-heading font-bold text-lg text-[#000000]">8071317</p>
+              <p className="font-body text-sm text-[#000000]/60 mt-3 mb-1">NAME </p>
+              <p className="font-heading font-bold text-lg text-[#000000]">MAASAI ACTION AID INITIATIVE</p>
             </div>
           </motion.div>
 
@@ -75,7 +77,7 @@ export default function SupportPage() {
             </div>
             <h3 className="font-heading font-bold text-2xl text-[#000000] mb-4 mt-0">Bank Transfer</h3>
             <p className="font-body text-[#000000]/70 mb-6 leading-relaxed">
-              Make a direct deposit. Ideal for international donors and larger contributions.
+              Make a direct bank deposit.
             </p>
             <div className="mt-auto bg-gray-50 p-4 rounded-xl border border-gray-100 space-y-3">
               <div>

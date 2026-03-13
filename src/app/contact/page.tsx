@@ -91,7 +91,7 @@ export default function ContactPage() {
             <h3 className="font-heading font-bold text-3xl text-[#000000] mb-8">Send a Message</h3>
             
             <form 
-              action="https://formspree.io/f/xreadldg" 
+              action="https://formspree.io/f/meerzogb" 
               method="POST" 
               className="space-y-6"
             >
